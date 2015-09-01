@@ -45,15 +45,15 @@ public void draw()
 }
 public void mousePressed()
 {
-	text("Lightning", (int)(Math.random()*(screenSize/2)), (int)((Math.random()*screenSize) + (screenSize/2)));
 	numMouseClicked++;
+	text("Lightning", (int)(Math.random()*(screenSize/2)), (int)((Math.random()*screenSize) + (screenSize/2)));
 	if (numMouseClicked == 6) {
 		setup();
 		numMouseClicked = 0;
 	}
 	else {
 		startX = 0;
-		startY = (int)(Math.random() * (screenSize/2));
+		startY = (int)(Math.random() * (screenSize/2) + 20);
 		endX = (int)(Math.random() * screenSize);
 		endY = (int)(Math.random() * screenSize);
 	}
