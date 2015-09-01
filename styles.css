@@ -1,7 +1,7 @@
 
 body {
-    background-color: rgb(200,200,200);
-    color: rgb(0,0,0);
+    background-image: url("http://photos.sjrdesign.net/images/stars_constellation_gemini1_big.jpg");
+    background-size: 100% 100%;    color: rgb(0,0,0);
     font-family: "Open Sans", sans-serif;
     text-align: center;
 }
