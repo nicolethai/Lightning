@@ -17,15 +17,18 @@ public class Lightning extends PApplet {
 int screenSize = 300;
 
 int startX = 0;
-int startY = 150;
+int startY = 15;
 int endX = 0;
-int endY = 150;
+int endY = 15;
+
+// mouseClicked counter
+int numMouseClicked = 0;
 
 public void setup()
 {
 	size(screenSize, screenSize);
-	background(0);
-	strokeWeight(2);
+	background(0, 0, 52);
+	strokeWeight(1);
 }
 public void draw()
 {
@@ -34,7 +37,7 @@ public void draw()
 	{
 		endX = startX + ((int)(Math.random() * 9));
 		endY = startY + ((int)(Math.random() * 19) - 9);
-		stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+		stroke(255);
 		line(startX, startY, endX, endY);
 		startX = endX;
 		startY = endY;
@@ -42,10 +45,19 @@ public void draw()
 }
 public void mousePressed()
 {
-	startX = startX;
-	startY = startY;
-	endX = endX;
-	endY = endY;
+	text("Lightning", (int)(Math.random()*(screenSize/2)), (int)((Math.random()*screenSize) + (screenSize/2)));
+	numMouseClicked++;
+	if (numMouseClicked == 6) {
+		setup();
+		numMouseClicked = 0;
+	}
+	else {
+		startX = 0;
+		startY = (int)(Math.random() * (screenSize/2));
+		endX = (int)(Math.random() * screenSize);
+		endY = (int)(Math.random() * screenSize);
+	}
+
 }
 
   static public void main(String[] passedArgs) {
