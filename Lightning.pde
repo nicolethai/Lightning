@@ -29,7 +29,8 @@ void draw()
 	}
 }
 
-void mousePressed()
+// check function
+void mousePressed() 
 {
 	numMouseClicked++;
 	// text("Lightning", (int)(Math.random()*(screenSize/2)), (int)((Math.random()*screenSize) + (screenSize/2)));
