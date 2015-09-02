@@ -44,6 +44,7 @@ public void draw()
 		startY = endY;
 	}
 }
+
 public void mousePressed()
 {
 	numMouseClicked++;
@@ -57,6 +58,7 @@ public void mousePressed()
 		startY = 0;
 		endX = (int)(Math.random() * screenSize);
 		endY = (int)(Math.random() * screenSize);
+		redraw();
 	}
 
 }
