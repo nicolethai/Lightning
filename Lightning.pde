@@ -13,20 +13,12 @@ void setup()
 	size(screenSize, screenSize);
 	background(0, 0, 52);
 	strokeWeight(1);
+	noLoop();
 }
 
 void draw()
 {
-	// sets the line points
-	while(endX <= screenSize)
-	{
-		endX = startX + ((int)(Math.random() * 19) - 9);
-		endY = startY + ((int)(Math.random() * 9));
-		stroke(255);
-		line(startX, startY, endX, endY);
-		startX = endX;
-		startY = endY;
-	}
+	lightning();
 }
 
 // check function
@@ -48,3 +40,17 @@ void mousePressed()
 
 }
 
+void lightning()
+{
+	// sets the line points
+	while(endX <= screenSize)
+	{
+		endX = startX + ((int)(Math.random() * 15) - 5);
+		endY = startY + ((int)(Math.random() * 5));
+		stroke(255);
+		line(startX, startY, endX, endY);
+		startX = endX;
+		startY = endY;
+	}	
+
+}
