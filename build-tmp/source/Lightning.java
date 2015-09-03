@@ -28,8 +28,8 @@ public void setup()
 {
 	size(screenSize, screenSize);
 	background(0, 0, 52);
-	strokeWeight(1);
 	noLoop();
+	stars();
 }
 
 public void draw()
@@ -47,7 +47,7 @@ public void mousePressed()
 		numMouseClicked = 0;
 	}
 	else {
-		startX = (int)(Math.random() * screenSize);
+		startX = (int)(Math.random() * (screenSize-10)) + 10;
 		startY = 0;
 		endX = (int)(Math.random() * screenSize);
 		endY = (int)(Math.random() * screenSize);
@@ -58,17 +58,41 @@ public void mousePressed()
 
 public void lightning()
 {
+
+	strokeWeight(1);
 	// sets the line points
 	while(endX <= screenSize)
 	{
-		endX = startX + ((int)(Math.random() * 15) - 5);
-		endY = startY + ((int)(Math.random() * 5));
+		endX = startX + ((int)(Math.random() * 19) - 9);
+		endY = startY + ((int)(Math.random() * 9));
 		stroke(255);
 		line(startX, startY, endX, endY);
 		startX = endX;
 		startY = endY;
 	}	
 
+}
+
+public void stars()
+{
+	for (int y =10; y < screenSize; y+=50)
+	{
+		for (int x = 10; x < screenSize; x+=25)
+		{
+			strokeWeight(.75f);
+			stroke(255);
+			point(x, y);
+		}
+	}
+	for (int y =35; y < screenSize; y+=50)
+	{
+		for (int x = 25; x < screenSize; x+=25)
+		{
+			strokeWeight(.75f);
+			stroke(255);
+			point(x, y);
+		}
+	}
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Lightning" };
