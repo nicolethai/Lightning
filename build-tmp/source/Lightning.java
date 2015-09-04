@@ -58,12 +58,13 @@ public void mousePressed()
 public void lightning()
 {
 	strokeWeight(1);
-	stroke((int)(Math.random() * 255));
 	// sets the line points
 	while(endX <= screenSize)
 	{
 		endX = startX + ((int)(Math.random() * 19) - 9);
 		endY = startY + ((int)(Math.random() * 9));
+	stroke((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
+
 		line(startX, startY, endX, endY);
 		startX = endX;
 		startY = endY;
