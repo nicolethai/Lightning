@@ -1,6 +1,6 @@
 int screenSize = 300;
 
-int startX = 15;
+int startX = -15;
 int startY = 0;
 int endX = 0;
 int endY = 15;
