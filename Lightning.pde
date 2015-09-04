@@ -41,7 +41,7 @@ void mousePressed()
 
 void lightning()
 {
-	strokeWeight(1);
+	strokeWeight(2);
 	// sets the line points
 	while(endX <= screenSize)
 	{
